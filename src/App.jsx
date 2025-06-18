@@ -1,8 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { Suspense } from 'react'; 
+import { RouterProvider } from 'react-router-dom';
+import router from './Routes/Applayout';
 
-function App() {
+const App = () => {
   return (
-    <div className='bg-yellow-400 p-4 text-center'>App</div>
+    <>
+      <Suspense fallback={
+        <div className='w-full h-screen flex items-center justify-center'>
+
+        </div>
+      }>
+        <RouterProvider router={router} />
+      </Suspense>
+    </>
   )
 }
 

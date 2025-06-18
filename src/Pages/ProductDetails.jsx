@@ -2,7 +2,7 @@ import React from 'react'
 
 function ProductDetails() {
   return (
-    <div>ProductDetails</div>
+    <div className='bg-blue-500 flex justify-center items-center text-5x'>ProductDetails</div>
   )
 }
 

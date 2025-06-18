@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import {Outlet} from 'react-router-dom';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
-function Outlet() {
+const style = () => {
   return (
-    <div>Outlet</div>
+    <>
+      <Navbar />
+      <Outlet /> 
+      <Footer />
+    </>
   )
 }
 
-export default Outlet
+export default style
