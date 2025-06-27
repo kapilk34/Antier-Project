@@ -32,7 +32,7 @@ const Navbar = () => {
   const navItems = [
     { id: 1, name: "Home" , href: "/" },
     { id: 2, name: "Products", href: "/products" },
-    { id: 3, name: "Product Details", href: "/productdetails" },
+    { id: 3, name: "About Us", href: "/aboutUs" },
     { id: 4, name: "Contact", href: "/contact" },
   ];
 
@@ -62,16 +62,19 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 w-full z-50 backdrop-blur-md shadow-lg transition-all duration-300 ${
-        scrolled ? "bg-gray-800/90 shadow-xl" : "bg-gray-800/80"
+        scrolled ? "bg-gray-200 shadow-xl" : "bg-gray-200"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <motion.div 
             whileHover={{ scale: 1.05 }}
-            className="text-white text-2xl font-bold cursor-pointer"
+            className="text-gray-700 text-2xl font-bold cursor-pointer"
           >
-            Ecommerce
+          <div className="flex flex-row gap-6">
+            <img src="./Logo.png" className="h-12"></img>
+            <p className="mt-2">AkT</p>
+          </div>
           </motion.div>
           
           <div className="hidden md:flex space-x-6">
@@ -81,12 +84,13 @@ const Navbar = () => {
                 href={item.href}
                 whileHover={{ scale: 1.05, color: "#d1d5db" }}
                 whileTap={{ scale: 0.95 }}
-                className="text-white font-medium px-3 py-2 rounded-lg transition-colors hover:bg-gray-400/50"
+                className="text-gray-900 font-medium px-3 py-2 rounded-lg transition-colors hover:bg-gray-900/50"
               >
                 {item.name}
               </motion.a>
             ))}
-            <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">Login/Sign</button>
+            <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">Login/Sign
+            </button>
           </div>
           
           <div className="md:hidden">

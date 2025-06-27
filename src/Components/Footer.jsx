@@ -51,16 +51,16 @@ const Footer = () => {
       whileInView="visible"
       viewport={{ once: true }}
       variants={containerVariants}
-      className="backdrop-blur-lg bg-gray-900/80 text-white py-12 shadow-inner border-t border-gray-700/50"
+      className="backdrop-blur-lg bg-gray-200 text-black py-12 shadow-inner border-t border-gray-200/50"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand column */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-              Ecommerce
+            <h3 className="text-xl font-bold  font-4xl flex-row bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+              <img src="./Logo.png" className="h-14"></img>
             </h3>
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-900 text-sm">
               Creating beautiful, accessible navigation experiences for modern web applications.
             </p>
             <div className="flex space-x-4 pt-2">
@@ -82,14 +82,14 @@ const Footer = () => {
 
           {/* Links columns */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h4 className="font-semibold text-gray-100">Product</h4>
+            <h4 className="font-semibold text-gray-900">Product</h4>
             <ul className="space-y-3">
               {footerLinks.slice(0, 3).map((link, index) => (
                 <li key={index}>
                   <motion.a
                     href={link.href}
                     whileHover={{ x: 5 }}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                    className="text-gray-700 hover:text-black transition-colors duration-300 text-sm"
                   >
                     {link.name}
                   </motion.a>
@@ -99,14 +99,14 @@ const Footer = () => {
           </motion.div>
 
           <motion.div variants={itemVariants} className="space-y-4">
-            <h4 className="font-semibold text-gray-100">Resources</h4>
+            <h4 className="font-semibold text-gray-900">Resources</h4>
             <ul className="space-y-3">
               {footerLinks.slice(3).map((link, index) => (
                 <li key={index}>
                   <motion.a
                     href={link.href}
                     whileHover={{ x: 5 }}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                    className="text-gray-700 hover:text-black transition-colors duration-300 text-sm"
                   >
                     {link.name}
                   </motion.a>
@@ -116,7 +116,7 @@ const Footer = () => {
                 <motion.a
                   href="#docs"
                   whileHover={{ x: 5 }}
-                  className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                  className="text-gray-700 hover:text-black transition-colors duration-300 text-sm"
                 >
                   Documentation
                 </motion.a>
@@ -126,22 +126,22 @@ const Footer = () => {
 
           {/* Newsletter */}
           <motion.div variants={itemVariants} className="space-y-4">
-            <h4 className="font-semibold text-gray-100">Subscribe</h4>
-            <p className="text-gray-400 text-sm">
+            <h4 className="font-semibold text-gray-900">Subscribe</h4>
+            <p className="text-gray-700 text-sm">
               Get the latest updates and news.
             </p>
             <form className="mt-2 flex">
               <input
                 type="email"
                 placeholder="Your email"
-                className="bg-gray-800/50 border border-gray-700 rounded-l-lg px-4 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="bg-black border border-gray-700 rounded-l-lg px-4 py-2 text-sm w-full focus:outline-none focus:ring-2 focus:ring-purple-500"
                 required
               />
               <motion.button
                 type="submit"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 rounded-r-lg text-sm font-medium"
+                className="bg-green-600 px-4 py-2 rounded-r-lg text-sm font-medium"
               >
                 Join
               </motion.button>
@@ -154,28 +154,28 @@ const Footer = () => {
           variants={itemVariants}
           className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
-          <div className="text-gray-400 text-sm">
+          <div className="text-gray-700 text-sm">
             © {currentYear} GlassNav. All rights reserved.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <motion.a 
               href="#privacy" 
               whileHover={{ y: -2 }}
-              className="text-gray-400 hover:text-white text-sm transition-colors"
+              className="text-gray-700 hover:text-black text-sm transition-colors"
             >
               Privacy Policy
             </motion.a>
             <motion.a 
               href="#terms" 
               whileHover={{ y: -2 }}
-              className="text-gray-400 hover:text-white text-sm transition-colors"
+              className="text-gray-700 hover:text-black text-sm transition-colors"
             >
               Terms of Service
             </motion.a>
             <motion.a 
               href="#cookies" 
               whileHover={{ y: -2 }}
-              className="text-gray-400 hover:text-white text-sm transition-colors"
+              className="text-gray-700 hover:text-black text-sm transition-colors"
             >
               Cookie Policy
             </motion.a>

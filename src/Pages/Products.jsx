@@ -1,8 +1,13 @@
 import React from 'react'
+import ProductCards from '../Components/ProductCards'
+import Banner from '../Components/Banner'
 
 function Products() {
   return (
-    <div className='bg-red-500 flex justify-center items-center text-5x'>Products</div>
+    <>
+      <Banner/>
+      <ProductCards />
+    </>
   )
 }
 
