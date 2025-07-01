@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion , AnimatePresence } from "framer-motion";
+import { Navigate } from "react-router-dom";
+import {Link} from "react-router-dom"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -89,7 +91,9 @@ const Navbar = () => {
                 {item.name}
               </motion.a>
             ))}
-            <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">Login/Sign
+            <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+            Dashboard
+             <Link to="/Login"></Link>
             </button>
           </div>
           
