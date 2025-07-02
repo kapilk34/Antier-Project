@@ -2,8 +2,8 @@ import React from 'react';
 import { Suspense } from 'react'; 
 import { RouterProvider } from 'react-router-dom';
 // import router from './Routes/CompleateRoutes';
-// import router from './Routes/Applayout';
-import router from './Routes/index';
+import router from './Routes/Applayout';
+// import router from './Routes/index';
 import { AuthProvider } from './context/AuthContext';
 import "./index.css";
 
